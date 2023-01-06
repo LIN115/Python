@@ -1,0 +1,15 @@
+t= int(input())
+x=[]
+for i in range(t):
+    y = 0
+    z = 0
+    x=list(map(int,input().split(',')))
+    for j in range(0,len(x),3):
+        a=x[j]
+        b=x[j + 1]
+        c=x[j + 2]
+        if a + b > c and a + c > b and b + c > a:
+            y += 1
+        else:
+            z += 1
+    print(y,",",z,sep="")
