@@ -1,3 +1,4 @@
+(1)
 m_to_d=[31,28,31,30,31,30,31,31,30,31,30,31]
 day_cycle=['Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday','Monday']
 while True:
@@ -12,3 +13,25 @@ while True:
         for j in range(m-1):
                 d += m_to_d[j]
         print(day_cycle[(d-1)%7])
+(2)
+m_to_d = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+day_cycle = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+while True:
+   m = [] 
+   d = []
+   x = input().split(",")
+   for i in range(len(x)):
+       if(i % 2 == 0):
+           m.append(x[i])
+       else:
+           d.append(x[i])
+   for i in range(len(m)):
+       a = int(d[i])
+       if int(m[i]) > 12 or int(m[i]) < 1:
+           print("Error")
+       elif int(d[i]) > m_to_d[int(m[i]) - 1] or int(d[i]) < 1:
+           print("Error")
+       else:
+           for j in range(int(m[i]) - 1):
+               a += m_to_d[j]
+           print(day_cycle[(a - 1) % 7])
