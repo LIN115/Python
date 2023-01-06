@@ -1,0 +1,6 @@
+while True: 
+    n = int(input()) 
+    a = n//850 
+    b = (150-100)*a  #判斷是否能再買 
+    c = (n+b)//150 
+    print(c)  
