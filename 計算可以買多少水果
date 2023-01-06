@@ -1,0 +1,20 @@
+(1)
+while True:
+    n,money = map(int, input().split())
+    t=[]
+    for i in range(n):
+        x,y=map(int, input().split())
+        t.insert(y, y/x)
+    a = money//min(t)
+    print(int(a)) 
+  
+(2)
+while True:
+    n,money = map(int, input().split())
+    t=[]
+    for i in range(n):
+       x,y=map(int, input().split())
+       b = y/x
+       t.append(b)
+    a = money//min(t)
+    print(int(a)) 
