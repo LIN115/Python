@@ -1,0 +1,7 @@
+import re
+while True:
+    s=list(input().split(","))
+    for i in range(len(s)):
+        b=s[i]
+        b= re.sub("\D","",s[i])
+        print(b)
