@@ -1,3 +1,4 @@
+(1)
 def prime(num):
     if num > 1:
         for i in range(2, int(num ** 0.5) + 1):
@@ -16,6 +17,27 @@ while True:
         else:
             a += 1
     print(a)
+(2)
+def prime(num):
+   if num > 1:
+       if num > 2:
+           if num % 2 == 1:
+               for i in range(2,int((num - 1) / 2)):
+                   if num % i == 0:
+                       return False  #有约数
+               return True    #沒有约数
+           return False       #3以上的偶数
+       return True            #等於2
+   return False               #小於2
 
+while True:    
+    a = 0
+    num  = list(map(int, input().split()))
+    for i in num:
+        if prime(i) == False:
+            a +=0
+        else:
+            a +=1
+    print(a)
     
     
