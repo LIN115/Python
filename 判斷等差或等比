@@ -1,0 +1,17 @@
+a = int(input()) 
+x = [] 
+for i in range(a): 
+    x = input().split(",") 
+    for j in range(0,len(x)-2): 
+            if int(x[j+1])/int(x[j])==int(x[j+2])/int(x[j+1]) and int(x[j+1])-int(x[j])==int(x[j+2])-int(x[j+1]): 
+                print("皆是") 
+                break
+            elif int(x[j+1])/int(x[j])==int(x[j+2])/int(x[j+1]): 
+                print("等比")
+                break
+            elif int(x[j+1])-int(x[j])==int(x[j+2])-int(x[j+1]): 
+                print("等差")
+                break
+            else:
+                print("皆不是")
+                break
